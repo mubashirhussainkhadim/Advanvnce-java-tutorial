@@ -60,27 +60,25 @@ class Tommy {
 
 public class methodInjavapractice {
     public static void main(String[] args) {
-        /*
-         * // Problem 1
-         * Employee harry = new Employee();
-         * harry.setName("CodeWithHarry");
-         * harry.salary = 233;
-         * System.out.println(harry.getSalary());
-         * System.out.println(harry.getName());
-         * 
-         * // Problem 2
-         * CellPhone asus = new CellPhone();
-         * asus.callFriend();
-         * asus.vibrate();
-         * //asus.ring();
-         * 
-         * 
-         * // Problem 3
-         * Square sq = new Square();
-         * sq.side = 3;
-         * System.out.println(sq.area());
-         * System.out.println(sq.perimeter());
-         */
+
+        // Problem 1
+        Employee Mubashir = new Employee();
+        Mubashir.setName("Blockchain Scientist");
+        Mubashir.salary = 233;
+        System.out.println(Mubashir.getSalary());
+        System.out.println(Mubashir.getName());
+
+        // Problem 2
+        CellPhone asus = new CellPhone();
+        asus.callFriend();
+        asus.vibrate();
+        // asus.ring();
+
+        // Problem 3
+        Square sq = new Square();
+        sq.side = 3;
+        System.out.println(sq.area());
+        System.out.println(sq.perimeter());
 
         // Problem 5
         Tommy player1 = new Tommy();
