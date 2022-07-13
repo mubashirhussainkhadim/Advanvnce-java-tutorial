@@ -29,5 +29,7 @@ public class accessModifierInJava {
         // trow error due to private acces modifier
         Mubashir.setName("Blockchain Eng");
         Mubashir.setId(12);
+        System.out.println(Mubashir.getName());
+        System.out.println(Mubashir.getId());
     }
 }
