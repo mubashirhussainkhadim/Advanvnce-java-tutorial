@@ -27,8 +27,12 @@ class Base1 {
  * derived1
  */
 class derived1 extends Base1 {
+    derived1(int a, int b) {
+        super(a);
+        System.out.println("I am DERIVIED CLASS CONSTRUCTOR" + b);
+    }
+
     derived1() {
-        super(0);
         System.out.println("I am DERIVIED CLASS CONSTRUCTOR");
     }
 
@@ -50,9 +54,11 @@ class derived1 extends Base1 {
 public class CustructorInInheritenceInJAVA {
 
     public static void main(String[] args) {
-        derived1 d = new derived1();
-        d.setX(8);
-        System.out.println(d.getX());
+        // derived1 d = new derived1();
+        // d.setX(8);
+        // System.out.println(d.getX());
+        derived1 d1 = new derived1(14, 9);
+        // System.out.println(d1);
     }
 
 }
