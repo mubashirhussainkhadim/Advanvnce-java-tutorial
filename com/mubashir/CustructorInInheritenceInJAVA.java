@@ -32,8 +32,10 @@ class derived1 extends Base1 {
         System.out.println("I am DERIVIED CLASS CONSTRUCTOR" + b);
     }
 
-    derived1() {
-        System.out.println("I am DERIVIED CLASS CONSTRUCTOR");
+    derived1(int a, int b, int c) {
+        super(b);
+        System.out.println("CLASSCLASSCLASSCLASS" + c);
+
     }
 
     int y;
@@ -48,6 +50,14 @@ class derived1 extends Base1 {
 
 }
 
+class derived3 extends derived1 {
+    derived3(int a, int b, int c) {
+        super(a, b);
+        System.out.println("CLASSCLASSCLASSCLASS" + c);
+
+    }
+}
+
 /**
  * CustructorInInheritenceInJAVA
  */
@@ -57,7 +67,8 @@ public class CustructorInInheritenceInJAVA {
         // derived1 d = new derived1();
         // d.setX(8);
         // System.out.println(d.getX());
-        derived1 d1 = new derived1(14, 9);
+        // derived1 d1 = new derived1(14, 9);
+        derived3 d2 = new derived3(1, 3, 4);
         // System.out.println(d1);
     }
 
