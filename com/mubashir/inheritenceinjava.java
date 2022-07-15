@@ -40,6 +40,7 @@ public class inheritenceinjava {
         derived d = new derived();
         d.setX(4);
         System.out.println(d.getX());
+        // you cannot acces child class component from base class
 
     }
 }
