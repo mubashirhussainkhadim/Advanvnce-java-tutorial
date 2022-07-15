@@ -43,4 +43,8 @@ public class MethodOverridingInJava {
         OverridingInJava_1 OverridingInJava_1 = new OverridingInJava_1();
         OverridingInJava_1.meth2();
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f5ccda994fe7e99a715fe3913be871f735a2e6f7

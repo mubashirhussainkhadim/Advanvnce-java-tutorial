@@ -39,4 +39,8 @@ public class DynamicMethodDispatchInJAVA {
         obj.name();
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f5ccda994fe7e99a715fe3913be871f735a2e6f7
