@@ -3,23 +3,23 @@ package com.mubashir;
 /**
  * Camera
  */
-interface MyCamera {
+interface MyCamera2 {
     void takesnap();
 
     void recordVideo();
 
     default void Record4kVideo() {
-        System.out.println("");
+        System.out.println("This is use for record video only");
     }
 }
 
-interface Wifi {
+interface Wifi2 {
     String[] getNetworks();
 
     void connectToNetwork(String network);
 }
 
-class MyCellPhone {
+class MyCellPhone2 {
     void callNumber(int phoneNumber) {
         System.out.println("Call" + phoneNumber);
     }
@@ -32,7 +32,7 @@ class MyCellPhone {
     // }
 }
 
-class MySmartphone extends MyCellPhone implements Wifi, MyCamera {
+class MySmartphone2 extends MyCellPhone2 implements Wifi2, MyCamera2 {
     public void takesnap() {
         System.out.println("Taking Snap");
     }
@@ -61,16 +61,20 @@ class MySmartphone extends MyCellPhone implements Wifi, MyCamera {
 }
 
 /**
- * InnerinterfaceInJava
+ * polymorfismInheritanceInJava
  */
 
-public class interfaceInJava {
+public class polymorfismInheritanceInJava {
 
     public static void main(String[] args) {
-        MySmartphone ms = new MySmartphone();
-        String[] ar = ms.getNetworks();
-        for (String item : ar) {
-            System.out.println(item);
-        }
+        // MySmartphone2 ms = new MySmartphone2();
+        // String[] ar = ms.getNetworks();
+        // for (String item : ar) {
+        // System.out.println(item);
+        // }
+        // }
+        MyCamera2 cam1 = new MySmartphone2();
+        // cam1.getNetworks(); ---> not allowed
+        cam1.Record4kVideo(); // ----> allowed
     }
 }

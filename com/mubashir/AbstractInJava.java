@@ -33,8 +33,4 @@ public class AbstractInJava {
     // Parent2 A = new Child2();
     // Parent2 B = new Child3()
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f5ccda994fe7e99a715fe3913be871f735a2e6f7
