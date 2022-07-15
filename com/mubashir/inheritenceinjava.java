@@ -34,8 +34,12 @@ class derived extends Base {
 public class inheritenceinjava {
 
     public static void main(String[] args) {
-        derived b = new derived();
+        Base b = new Base();
         b.setX(4);
         System.out.println(b.getX());
+        derived d = new derived();
+        d.setX(4);
+        System.out.println(d.getX());
+
     }
 }
