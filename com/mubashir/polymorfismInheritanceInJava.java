@@ -1,5 +1,7 @@
 package com.mubashir;
 
+import java.math.BigInteger;
+
 /**
  * Camera
  */
@@ -20,11 +22,11 @@ interface Wifi2 {
 }
 
 class MyCellPhone2 {
-    void callNumber(int phoneNumber) {
+    void callNumber(String phoneNumber) {
         System.out.println("Call" + phoneNumber);
     }
 
-    void pickCall(int phoneNumber) {
+    void pickCall(String phoneNumber) {
         System.out.println("Connecting...." + phoneNumber);
     }
     // void takesnap() {
@@ -41,11 +43,11 @@ class MySmartphone2 extends MyCellPhone2 implements Wifi2, MyCamera2 {
         System.out.println("video is recoded");
     }
 
-    public void callNumber(int phoneNumber) {
+    public void callNumber(BigInteger phoneNumber) {
         System.out.println("Call" + phoneNumber);
     }
 
-    public void pickCall(int phoneNumber) {
+    public void pickCall(BigInteger phoneNumber) {
         System.out.println("Connecting...." + phoneNumber);
     }
 
@@ -57,6 +59,10 @@ class MySmartphone2 extends MyCellPhone2 implements Wifi2, MyCamera2 {
 
     public void connectToNetwork(String network) {
         System.out.println("Connecting to" + network);
+    }
+
+    public void SamppleMethod() {
+        System.out.println("THIS IS SAMPLE METHOD");
     }
 }
 
@@ -75,6 +81,16 @@ public class polymorfismInheritanceInJava {
         // }
         MyCamera2 cam1 = new MySmartphone2();
         // cam1.getNetworks(); ---> not allowed
+        // cam1.SamppleMethod(); ---> not allowed
         cam1.Record4kVideo(); // ----> allowed
+        MySmartphone2 ms = new MySmartphone2();
+        ms.Record4kVideo();
+        ms.SamppleMethod();
+        ms.getNetworks();
+        ms.takesnap();
+        ms.connectToNetwork(" ZONG");
+        ms.callNumber(" 03228430133");
+        ms.pickCall(" 03228430133");
+
     }
 }
