@@ -20,7 +20,7 @@ public class SortingAndReverse {
     	 countries.add("Srilanka");
     	 countries.add("London");
     	 countries.add("Iran");
-    	 ListListst app =  new ListListst();
+    	 SortingAndReverse app =  new SortingAndReverse();
     	 app.printList(countries);
          System.out.println("************");
          countries.sort(null);
