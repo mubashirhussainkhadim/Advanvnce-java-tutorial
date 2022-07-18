@@ -34,7 +34,7 @@ class Data <K,V>{
 }
 	}
 
-public class TypeParametersinGenericMethods {
+public class TypeParametersinGenericMethod {
     public static void main(String[] args) {
     	Data<Integer, String> data = new Data<Integer, String>(1, "Mubashir");
     	
