@@ -15,7 +15,9 @@ class Vehical{
 	public String toString() {
 		return "Vehical [vehicalId=" + vehicalId + "]";
 	}
-	
+	 void info() {
+		System.out.println("Vehicalid id:" + getVehicalId());
+	}
 	
 }
 class Car extends Vehical {
@@ -31,9 +33,12 @@ class Car extends Vehical {
 	public String toString() {
 		return "Car [CarModel=" + CarModel + "]";
 	}
-	
+	@Override
+     void info() {
+		System.out.println("Car Id:" + getCarModel());
+	}
 }
-public class WildCardsInGenerics {
+public class WilCardsInGenerics {
 	public static void main(String[] args) {
 		List<Vehical> list = new ArrayList<>();
 		list.add(new Vehical(10));
@@ -57,9 +62,9 @@ public class WildCardsInGenerics {
 		
 
 	}                        
-	public static void display(List<? super Car > list) { // for upper bound extends Vehical or parent class
-		for(Object element:list) {
-			System.out.println(element);
+	public static void display(List<? extends  Vehical > list) { // for upper bound extends Vehical or parent class
+		for(Vehical element:list) {
+			element.info();
 		}
 		System.out.println("*************");
 	}
