@@ -18,6 +18,8 @@ public class QueueInJava {
 //     queue.add(9);
      Queue<Integer> queue = new ArrayBlockingQueue<>(6);
      System.out.println(queue.poll());
+     System.out.println(queue.peek());
+
      try {
       queue.offer(1);
       queue.offer(2);
@@ -48,6 +50,9 @@ public class QueueInJava {
      System.out.println(queue.remove());
      System.out.println("***********************");
     System.out.println(queue.poll());
+    System.out.println("***********************");
+    System.out.println("First element in queue: "+ queue.peek());
+
     System.out.println("First element in queue: "+queue.element());
 	}
 
