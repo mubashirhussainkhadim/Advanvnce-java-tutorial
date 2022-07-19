@@ -45,10 +45,10 @@ class Code implements Comparable<Code> {
 	}
 	
 }
-public class EqualsandHashcodesInJava {
+public class MapsInJava {
 
 	public static void main(String[] args) {
-     Map<Code,String> lectures = new TreeMap<>();
+     Map<Code,String> lectures = new TreeMap<>(); 
      lectures.put(new Code ("S01" ,"L03"), "Generics");
      lectures.put(new Code ("S01" ,"L01"), "Files Under Java");
      lectures.put(new Code ("S02" ,"L03"), "Network Programming");
@@ -56,22 +56,28 @@ public class EqualsandHashcodesInJava {
      lectures.put(new Code ("S01" ,"L05"), "Methods");
      lectures.put(new Code ("S01" ,"L03"), "EXpression");
      
+    for (Map.Entry<Code, String> entry: lectures.entrySet()) {
+   	System.out.println("key: "+ entry.getKey() + " value: "+entry.getValue());
+    }
+    
+    Code code1 = new Code ("S01" ,"L03");
+    Code code2 = new Code ("S01" ,"L03");    
+    System.out.println(code1.equals(code2));
+    System.out.println("code1 Hashcode " + code1.hashCode() +" code2 Hashcode " + code2.hashCode());
      
-     for (Map.Entry<Code, String> entry: lectures.entrySet()) {
-    	System.out.println("key: "+ entry.getKey() + " value: "+entry.getValue());
+    String name1 = new String("Mubashir");
+    String name2 = new String("Mubashir");
+    System.out.println(name1 == name2);
+    System.out.println("Name1 hash: "+name1.hashCode()+"Name2 hash: "+name2.hashCode());
+    System.out.println(name1.equals(name2));
+       
+       Code code = null;
+     for(Map.Entry<Code, String>entry: lectures.entrySet()) {
+    	 if(entry.getValue().equals("OOPS")) {
+    		 code= entry.getKey();
+    	 }
      }
-//     
-//     Code code1 = new Code ("S01" ,"L03");
-//     Code code2 = new Code ("S01" ,"L03");    
-//     System.out.println(code1.equals(code2));
-//     System.out.println("code1 Hashcode " + code1.hashCode() +" code2 Hashcode " + code2.hashCode());
-     
-//     String name1 = new String("Mubashir");
-//     String name2 = new String("Mubashir");
-//     System.out.println(name1 == name2);
-//     System.out.println("Name1 hash: "+name1.hashCode()+"Name2 hash: "+name2.hashCode());
-//     System.out.println(name1.equals(name2));
-
+         System.out.println("THE KEY VALUE \"OOPS\""+code);
      }
      
 	}
